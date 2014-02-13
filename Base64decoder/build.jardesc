@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="MS932" standalone="no"?>
+<jardesc>
+    <jar path="C:/Users/Matsuzawa/Desktop/Base64decoder.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/Base64decoder/build.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" mainClassHandleIdentifier="=Base64decoder/src&lt;matz{Base64decoder.java[Base64decoder" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
+        <file path="/Base64decoder/.classpath"/>
+        <folder path="/Base64decoder/commons-codec-1.7"/>
+        <file path="/Base64decoder/.project"/>
+        <javaElement handleIdentifier="=Base64decoder/src"/>
+    </selectedElements>
+</jardesc>

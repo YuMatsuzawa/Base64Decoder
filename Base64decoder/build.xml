@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project Base64decoder with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="//str33/laboshare/Base64decoder.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="matz.Base64decoder"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ commons-codec-1.7-javadoc.jar commons-codec-1.7-sources.jar commons-codec-1.7-test-sources.jar commons-codec-1.7-tests.jar commons-codec-1.7.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="C:/Users/Matsuzawa/workspace/Base64decoder/bin"/>
+            <zipfileset dir="C:\Users\Matsuzawa\workspace\Base64decoder\commons-codec-1.7" includes="commons-codec-1.7-javadoc.jar"/>
+            <zipfileset dir="C:\Users\Matsuzawa\workspace\Base64decoder\commons-codec-1.7" includes="commons-codec-1.7-sources.jar"/>
+            <zipfileset dir="C:\Users\Matsuzawa\workspace\Base64decoder\commons-codec-1.7" includes="commons-codec-1.7-test-sources.jar"/>
+            <zipfileset dir="C:\Users\Matsuzawa\workspace\Base64decoder\commons-codec-1.7" includes="commons-codec-1.7-tests.jar"/>
+            <zipfileset dir="C:\Users\Matsuzawa\workspace\Base64decoder\commons-codec-1.7" includes="commons-codec-1.7.jar"/>
+        </jar>
+    </target>
+</project>
