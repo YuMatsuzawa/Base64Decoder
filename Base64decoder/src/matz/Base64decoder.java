@@ -1,23 +1,24 @@
 package matz;
 
-/* twitterログのvalue内容をBase64デコードする。
- * だいたいこのクラスはdssXXディレクトリ一つに対し7-8時間、bzの解凍と同時に行うと12時間強かかる。
- * 	$ java -jar Base64Decoder.jar
- * でメインクラスが勝手に走る。バックグラウンドプロセスにして、かつログアウト後も実行させるにはnohupを使う。
- * 	$ nohup java <option> <jarfile> [<class>[ <args>]] > std.log 2> err.log &
- * 末尾の&がバックグラウンド指定子。これはshファイルに対して使っても構わない（shの子プロセス全てに継承される。多分）。
- * コマンドライン引数は1つだけ受けられて、ディレクトリ番号（dssXXのXX部分）を指定できる。
- * 解凍と同時に行うならshで書いて使う。/home/matsuzawa/以下に置いてある。
- * このクラスは処理（デコード）の終わった元ログを容量節約のために削除していく点に注意。
- * org.apache.commons.codecパッケージを使っているので、これをサーバにも導入するか、あるいはjarに含めてやる必要がある。
- * eclipseのエクスポートでjarに含めてやりたいがイマイチやり方がわからないので、実行可能jarファイルとしてエクスポートした時の構成をbuild.xmlに記録してある（こっちだとなぜか出来る）。
- */
-
 import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.apache.commons.codec.binary.Base64;
+
+/**
+ * twitterログのvalue内容をBase64デコードする。<br />
+ * だいたいこのクラスはdssXXディレクトリ一つに対し7-8時間、bzの解凍と同時に行うと12時間強かかる。<br />
+ * 	$ java -jar Base64Decoder.jar<br />
+ * でメインクラスが勝手に走る。バックグラウンドプロセスにして、かつログアウト後も実行させるにはnohupを使う。<br />
+ * 	$ nohup java <option> <jarfile> [<class>[ <args>]] > std.log 2> err.log &<br />
+ * 末尾の&がバックグラウンド指定子。これはshファイルに対して使っても構わない（shの子プロセス全てに継承される。多分）。<br />
+ * コマンドライン引数は1つだけ受けられて、ディレクトリ番号（dssXXのXX部分）を指定できる。<br />
+ * 解凍と同時に行うならshで書いて使う。/home/matsuzawa/以下に置いてある。<br />
+ * このクラスは処理（デコード）の終わった元ログを容量節約のために削除していく点に注意。<br />
+ * org.apache.commons.codecパッケージを使っているので、これをサーバにも導入するか、あるいはjarに含めてやる必要がある。<br />
+ * eclipseのエクスポートでjarに含めてやりたいがイマイチやり方がわからないので、実行可能jarファイルとしてエクスポートした時の構成をbuild.xmlに記録してある（こっちだとなぜか出来る）。<br />
+ */
 
 public class Base64decoder {
 
